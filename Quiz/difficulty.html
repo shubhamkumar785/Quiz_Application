@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Difficulty</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Select Difficulty Level</h1>
+    <button onclick="startQuiz('easy')">Easy</button>
+    <button onclick="startQuiz('medium')">Medium</button>
+    <button onclick="startQuiz('hard')">Hard</button>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const topic = urlParams.get('topic');
+
+    function startQuiz(level) {
+      window.location.href = `quiz.html?topic=${topic}&level=${level}`;
+    }
+  </script>
+</body>
+</html>

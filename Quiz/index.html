@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Topic</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .lang-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #47a5b1;
+      color: white;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+    .lang-btn:hover {
+      background-color: #392fa6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Topic</h1>
+    <div class="btn-group">
+      <button class="lang-btn" onclick="goToDifficulty('python')">Python</button>
+      <button class="lang-btn" onclick="goToDifficulty('java')">Java</button>
+      <button class="lang-btn" onclick="goToDifficulty('javascript')">JavaScript</button>
+      <button class="lang-btn" onclick="goToDifficulty('c')">C</button>
+      <button class="lang-btn" onclick="goToDifficulty('dsa')">DSA</button>
+    </div>
+  </div>
+
+  <script>
+    function goToDifficulty(topic) {
+      window.location.href = `difficulty.html?topic=${topic}`;
+    }
+  </script>
+</body>
+</html>
+
